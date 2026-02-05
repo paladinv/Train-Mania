@@ -86,8 +86,8 @@ body {
 .cell img.sprite { width: 56px; height: 56px; pointer-events: none; }
 
 .track-shape {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   border-radius: 8px;
   background: #10153d;
   position: relative;
@@ -103,15 +103,15 @@ body {
 .track-horizontal::before {
   left: 0;
   right: 0;
-  top: 21px;
-  height: 8px;
+  top: 26px;
+  height: 12px;
 }
 
 .track-vertical::before {
   top: 0;
   bottom: 0;
-  left: 21px;
-  width: 8px;
+  left: 26px;
+  width: 12px;
 }
 
 .track-turn-tr::before,
@@ -127,21 +127,36 @@ body {
   box-shadow: none;
 }
 
-.track-turn-tr::before { left: 21px; top: 0; width: 8px; height: 25px; }
-.track-turn-tr::after { left: 21px; top: 21px; width: 25px; height: 8px; }
-.track-turn-rb::before { left: 21px; top: 21px; width: 25px; height: 8px; }
-.track-turn-rb::after { left: 21px; top: 21px; width: 8px; height: 25px; }
-.track-turn-bl::before { left: 0; top: 21px; width: 29px; height: 8px; }
-.track-turn-bl::after { left: 21px; top: 21px; width: 8px; height: 25px; }
-.track-turn-lt::before { left: 0; top: 21px; width: 29px; height: 8px; }
-.track-turn-lt::after { left: 21px; top: 0; width: 8px; height: 29px; }
+.track-turn-tr::before { left: 26px; top: 0; width: 12px; height: 32px; }
+.track-turn-tr::after { left: 26px; top: 26px; width: 38px; height: 12px; }
+.track-turn-rb::before { left: 26px; top: 26px; width: 38px; height: 12px; }
+.track-turn-rb::after { left: 26px; top: 26px; width: 12px; height: 38px; }
+.track-turn-bl::before { left: 0; top: 26px; width: 38px; height: 12px; }
+.track-turn-bl::after { left: 26px; top: 26px; width: 12px; height: 38px; }
+.track-turn-lt::before { left: 0; top: 26px; width: 38px; height: 12px; }
+.track-turn-lt::after { left: 26px; top: 0; width: 12px; height: 38px; }
 
 .sidebar { padding: 1rem; display: grid; gap: 0.8rem; }
 .widget { background: #232b66; border-radius: 12px; padding: 0.8rem; }
 .widget h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
 .next-tile { display: grid; place-items: center; min-height: 62px; }
-.timer-line { display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.timer-line { display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: 800; color: var(--accent); flex-wrap: wrap; }
 .timer-line img { width: 38px; height: 38px; }
+.depart-btn {
+  background: linear-gradient(120deg, #3df2ff, #36ff9c);
+  border: none;
+  color: #0b1230;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.depart-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 #leaderboard { padding-left: 1.2rem; margin: 0; }
 #score { font-size: 2rem; margin: 0; color: var(--green); }
