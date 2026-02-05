@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="Train Mania logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5ea8"/>
+      <stop offset="1" stop-color="#ffbe3d"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12d8ff"/>
+      <stop offset="1" stop-color="#5dff87"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="220" rx="28" fill="url(#bg)"/>
+  <circle cx="100" cy="158" r="16" fill="#272838"/>
+  <circle cx="160" cy="158" r="16" fill="#272838"/>
+  <rect x="70" y="102" width="120" height="48" rx="10" fill="#272838"/>
+  <rect x="85" y="88" width="58" height="24" rx="6" fill="#272838"/>
+  <rect x="95" y="94" width="36" height="12" rx="2" fill="#9df0ff"/>
+  <rect x="194" y="118" width="14" height="20" rx="4" fill="#272838"/>
+  <text x="235" y="130" font-family="'Trebuchet MS',sans-serif" font-size="70" font-weight="900" fill="url(#text)" stroke="#272838" stroke-width="6" paint-order="stroke">TRAIN</text>
+  <text x="240" y="190" font-family="'Trebuchet MS',sans-serif" font-size="68" font-weight="900" fill="#ffffff" stroke="#272838" stroke-width="6" paint-order="stroke">MANIA!</text>
+</svg>

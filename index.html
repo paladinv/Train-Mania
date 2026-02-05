@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Train Mania</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <img class="logo" src="assets/logo.svg" alt="Train Mania logo" />
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Game</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="panel game-panel">
+      <h1>Tutorial Round 1: Build the Line!</h1>
+      <p class="subtitle">Connect START (top-left) to GOAL (bottom-right) before the train gets lost.</p>
+      <div id="grid" class="grid" aria-label="game grid"></div>
+      <div class="actions">
+        <button id="reset-round">Reset Round</button>
+      </div>
+    </section>
+
+    <aside class="panel sidebar">
+      <section class="widget">
+        <h2>Next Tile</h2>
+        <div id="next-tile" class="next-tile"></div>
+      </section>
+
+      <section class="widget timer-widget">
+        <h2>Departure Timer</h2>
+        <div class="timer-line">
+          <img src="assets/timer.svg" alt="timer icon" />
+          <span id="timer">01:00</span>
+        </div>
+      </section>
+
+      <section class="widget">
+        <h2>Score</h2>
+        <p id="score">0</p>
+      </section>
+
+      <section class="widget">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+      </section>
+
+      <section class="widget">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Click an empty cell to place the shown tile.</li>
+          <li>The train starts after 60 seconds.</li>
+          <li>You can keep placing tiles while the train moves.</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="achievement-dialog">
+    <h2>🏆 Achievement Unlocked!</h2>
+    <p id="achievement-message"></p>
+    <button id="next-round">Next Round</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="train sprite">
+  <rect x="18" y="36" width="92" height="58" rx="12" fill="#3f51ff"/>
+  <rect x="30" y="22" width="50" height="24" rx="8" fill="#3f51ff"/>
+  <rect x="36" y="28" width="14" height="10" rx="2" fill="#baf3ff"/>
+  <rect x="56" y="28" width="14" height="10" rx="2" fill="#baf3ff"/>
+  <rect x="92" y="48" width="14" height="20" rx="4" fill="#ffcf5a"/>
+  <circle cx="42" cy="96" r="10" fill="#242424"/>
+  <circle cx="86" cy="96" r="10" fill="#242424"/>
+  <rect x="16" y="58" width="12" height="14" rx="4" fill="#ff6ab6"/>
+</svg>
