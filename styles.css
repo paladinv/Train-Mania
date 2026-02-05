@@ -1,0 +1,176 @@
+:root {
+  --bg: #0d1029;
+  --panel: #1a1f4e;
+  --panel-soft: #262d63;
+  --text: #ffffff;
+  --accent: #ffcc29;
+  --teal: #20e4ff;
+  --pink: #ff62b2;
+  --green: #56f58a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #283583, var(--bg));
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: #0a0d25cc;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(4px);
+}
+
+.logo { width: min(320px, 60vw); height: auto; }
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--panel-soft);
+}
+
+.nav a[aria-current="page"] { background: var(--pink); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  background: linear-gradient(160deg, var(--panel), #11163a);
+  border: 3px solid #3f4db0;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px #00000044;
+}
+
+.game-panel { padding: 1rem; }
+.subtitle { color: #d6dfff; }
+
+.grid {
+  display: grid;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  justify-content: start;
+}
+
+.cell {
+  width: 74px;
+  height: 74px;
+  border: 2px solid #5c69ce;
+  border-radius: 10px;
+  background: #222c73;
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.cell.station-start { background: #1f8f53; }
+.cell.station-end { background: #ad2f2f; }
+.cell.train-here { box-shadow: inset 0 0 0 4px var(--accent); }
+
+.cell img.sprite { width: 56px; height: 56px; pointer-events: none; }
+
+.track-shape {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: #10153d;
+  position: relative;
+}
+
+.track-shape::before,
+.track-shape::after {
+  content: "";
+  position: absolute;
+  background: var(--teal);
+}
+
+.track-horizontal::before {
+  left: 0;
+  right: 0;
+  top: 21px;
+  height: 8px;
+}
+
+.track-vertical::before {
+  top: 0;
+  bottom: 0;
+  left: 21px;
+  width: 8px;
+}
+
+.track-turn-tr::before,
+.track-turn-tr::after,
+.track-turn-rb::before,
+.track-turn-rb::after,
+.track-turn-bl::before,
+.track-turn-bl::after,
+.track-turn-lt::before,
+.track-turn-lt::after {
+  width: 8px;
+  height: 8px;
+  box-shadow: none;
+}
+
+.track-turn-tr::before { left: 21px; top: 0; width: 8px; height: 25px; }
+.track-turn-tr::after { left: 21px; top: 21px; width: 25px; height: 8px; }
+.track-turn-rb::before { left: 21px; top: 21px; width: 25px; height: 8px; }
+.track-turn-rb::after { left: 21px; top: 21px; width: 8px; height: 25px; }
+.track-turn-bl::before { left: 0; top: 21px; width: 29px; height: 8px; }
+.track-turn-bl::after { left: 21px; top: 21px; width: 8px; height: 25px; }
+.track-turn-lt::before { left: 0; top: 21px; width: 29px; height: 8px; }
+.track-turn-lt::after { left: 21px; top: 0; width: 8px; height: 29px; }
+
+.sidebar { padding: 1rem; display: grid; gap: 0.8rem; }
+.widget { background: #232b66; border-radius: 12px; padding: 0.8rem; }
+.widget h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.next-tile { display: grid; place-items: center; min-height: 62px; }
+.timer-line { display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.timer-line img { width: 38px; height: 38px; }
+
+#leaderboard { padding-left: 1.2rem; margin: 0; }
+#score { font-size: 2rem; margin: 0; color: var(--green); }
+
+.actions button,
+#next-round {
+  background: linear-gradient(130deg, var(--pink), #ff9259);
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  cursor: pointer;
+}
+
+dialog {
+  border: 3px solid #5368ff;
+  border-radius: 16px;
+  background: #171f53;
+  color: white;
+  max-width: 360px;
+}
+
+.about-page {
+  margin: 1rem;
+  padding: 1rem 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
